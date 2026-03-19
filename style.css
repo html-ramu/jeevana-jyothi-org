@@ -818,6 +818,55 @@ button { cursor: pointer; border: none; background: none; font-family: var(--fon
   font-size: 1.15rem;
 }
 
+/* ---------- FOUNDER SECTION ---------- */
+.founder-section {
+  padding: 6rem 0;
+  background: var(--light-bg); /* పక్క సెక్షన్స్ నుండి కొద్దిగా వేరుగా కనిపించడానికి */
+}
+.founder-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.founder-content {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 3rem 2rem;
+  box-shadow: var(--shadow);
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  border: 1px solid var(--border);
+}
+.founder-emoji {
+  font-size: 4rem;
+  line-height: 1;
+  width: 90px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(13, 110, 253, 0.1);
+  color: var(--accent);
+  flex-shrink: 0;
+}
+.founder-text p {
+  font-family: 'Mallanna', sans-serif;
+  font-size: 1.35rem;
+  color: #000000;
+  margin-bottom: 1rem;
+  line-height: 1.8;
+}
+.founder-text p:last-child {
+  margin-bottom: 0;
+}
+
 /* ---------- CONTACT ---------- */
 .contact-section {
   padding: 6rem 0;
@@ -1047,7 +1096,9 @@ button { cursor: pointer; border: none; background: none; font-family: var(--fon
   .programs-section,
   .achievements-section,
   .testimonials-section,
+  .founder-section,
   .contact-section { padding: 3.5rem 0; }
+  .founder-content { padding: 2rem 1.5rem; }
   .donate-banner { padding: 3rem 0; }
   .section-desc { margin-bottom: 2rem; }
   .section-desc.center { margin-bottom: 2rem; }
@@ -1118,6 +1169,7 @@ button { cursor: pointer; border: none; background: none; font-family: var(--fon
   .programs-section,
   .achievements-section,
   .testimonials-section,
+  .founder-section,
   .contact-section { padding: 2.5rem 0; }
   .donate-banner { padding: 2.5rem 0; }
   .hero { padding: 100px 0 50px; }
