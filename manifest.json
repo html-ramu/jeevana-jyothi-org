@@ -1,0 +1,21 @@
+{
+  "name": "Jivana Jyoti School for the Visually Impaired",
+  "short_name": "Jivana Jyoti",
+  "description": "Empowering visually impaired students through quality education, technology, and holistic development.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0d3b66",
+  "icons": [
+    {
+      "src": "icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
