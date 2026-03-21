@@ -57,6 +57,37 @@ ul { list-style: none; }
 address { font-style: normal; }
 button { cursor: pointer; border: none; background: none; font-family: var(--font-body); }
 
+/* ---------- MULTI-LANGUAGE UTILITY CLASSES ---------- */
+.text-en { 
+  font-family: var(--font-body); 
+  font-size: 0.95rem; 
+  line-height: 1.7; 
+  color: var(--text-mid); 
+  margin-bottom: 0.75rem; 
+}
+.text-hi { 
+  font-family: 'Hind', sans-serif; 
+  font-size: 1.05rem; 
+  line-height: 1.7; 
+  color: var(--text-dark); 
+  margin-bottom: 0.75rem; 
+}
+.text-te { 
+  font-family: 'Mallanna', sans-serif; 
+  font-size: 1.25rem; 
+  line-height: 1.7; 
+  color: #000000; 
+  margin-bottom: 0.75rem; 
+}
+.lang-divider {
+  border: 0;
+  height: 1px;
+  background: var(--border);
+  margin: 1.5rem auto;
+  width: 50%;
+}
+.lang-group { margin-bottom: 1rem; }
+
 /* ---------- SKIP LINK ---------- */
 .skip-link {
   position: absolute;
@@ -261,11 +292,7 @@ button { cursor: pointer; border: none; background: none; font-family: var(--fon
 .hamburger.open span:nth-child(2) { opacity: 0; }
 .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
 
-/* Nav links flex container */
-.nav-links {
-  display: flex;
-  align-items: center;
-}
+.nav-links { display: flex; align-items: center; }
 
 /* ---------- HERO ---------- */
 .hero {
@@ -283,11 +310,10 @@ button { cursor: pointer; border: none; background: none; font-family: var(--fon
   gap: 3rem;
   width: 100%;
 }
-/* ఈ సెక్షన్ కరెక్ట్ గా పేజీ మధ్యలో వచ్చేలా సెట్ చేశాం */
 .hero-content {
   position: relative;
   z-index: 2;
-  max-width: 700px;
+  max-width: 800px;
   margin: 0 auto; 
   text-align: center;
 }
@@ -312,15 +338,6 @@ button { cursor: pointer; border: none; background: none; font-family: var(--fon
   margin-bottom: 1.5rem;
 }
 .highlight { color: var(--accent); }
-.hero-desc {
-  font-family: 'Mallanna', sans-serif;
-  font-size: clamp(1.15rem, 2.5vw, 1.4rem);
-  color: #000000;
-  margin: 0 auto 2.5rem;
-  max-width: 580px;
-  line-height: 1.8;
-}
-/* బటన్స్ మధ్యలో వచ్చేలా చేశాం */
 .hero-actions { 
   display: flex; 
   gap: 1rem; 
@@ -394,12 +411,6 @@ button { cursor: pointer; border: none; background: none; font-family: var(--fon
   font-family: var(--font-heading);
   font-size: 1.6rem;
   margin-bottom: 0.5rem;
-}
-.slide-caption p {
-  font-family: 'Mallanna', sans-serif;
-  font-size: 1.25rem;
-  opacity: 0.95;
-  margin-top: 0.2rem;
 }
 .carousel-btn {
   position: absolute;
@@ -516,9 +527,8 @@ button { cursor: pointer; border: none; background: none; font-family: var(--fon
 }
 .section-title.center { text-align: center; }
 .section-desc {
-  font-family: 'Mallanna', sans-serif;
-  font-size: 1.35rem;
-  color: #000000;
+  font-size: 1.15rem;
+  color: var(--text-mid);
   max-width: 700px;
   margin-bottom: 3rem;
   line-height: 1.8;
@@ -555,22 +565,14 @@ button { cursor: pointer; border: none; background: none; font-family: var(--fon
   object-fit: cover;
   display: block;
 }
-/* ఫోటో మీద వచ్చే బ్రెయిలీ క్యాప్షన్ డిజైన్ */
 .braille-caption {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
+  bottom: 0; left: 0; width: 100%;
   background: linear-gradient(transparent, rgba(10,20,50,0.95));
-  color: #ffffff;
   padding: 3rem 1.5rem 1.5rem;
-  font-family: 'Mallanna', sans-serif;
-  font-size: 1.3rem;
-  text-align: center;
-  line-height: 1.4;
-  z-index: 2;
+  text-align: center; z-index: 2;
 }
-/* 20 Years బ్యాడ్జ్ ను ఫోటో కింద గ్యాప్ ఇచ్చి సెట్ చేయడం */
+
 .standalone-badge {
   display: inline-block;
   background: var(--accent);
@@ -590,38 +592,18 @@ button { cursor: pointer; border: none; background: none; font-family: var(--fon
 }
 .badge-text { font-size: 0.8rem; line-height: 1.4; }
 
-/* మెయిన్ మ్యాటర్ సెంటర్ డిజైన్ */
-.about-text-centered {
-  text-align: center;
-  width: 100%;
-}
-.about-text-centered p {
-  font-family: 'Mallanna', sans-serif;
-  font-size: 1.15rem;
-  color: #000000;
-  margin-bottom: 1.25rem;
-  line-height: 1.8;
-  text-align: center;
-}
-/* లిస్ట్ సెంటర్ అలైన్‌మెంట్ మరియు బటన్ కిందకు వెళ్ళేలా మార్పు */
+.about-text-centered { text-align: center; width: 100%; }
+
 .about-list-centered {
-  margin: 1.5rem auto 2.5rem;
+  margin: 1rem auto 1.5rem;
   display: flex;         
   width: fit-content;    
   flex-direction: column;
   align-items: flex-start;
   text-align: left;
-  gap: 0.8rem;
-}
-.about-list-centered li {
-  font-family: 'Mallanna', sans-serif;
-  color: #000000;
-  font-weight: 500;
-  font-size: 1.15rem;
-  display: flex;
-  align-items: flex-start;
   gap: 0.5rem;
 }
+.about-list-centered li { display: flex; align-items: flex-start; gap: 0.5rem; }
 
 /* ---------- PROGRAMS ---------- */
 .programs-section {
@@ -642,6 +624,8 @@ button { cursor: pointer; border: none; background: none; font-family: var(--fon
   cursor: pointer;
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 .program-card::before {
   content: '';
@@ -673,14 +657,11 @@ button { cursor: pointer; border: none; background: none; font-family: var(--fon
   color: var(--primary);
   margin-bottom: 0.75rem;
 }
-.program-card p {
-  font-family: 'Mallanna', sans-serif;
-  font-size: 1.15rem;
-  color: #000000;
-  line-height: 1.7;
-  margin-bottom: 1.25rem;
+.program-card .text-en, .program-card .text-hi, .program-card .text-te {
+  margin-bottom: 1rem;
 }
 .card-link {
+  margin-top: auto;
   font-size: 0.875rem;
   font-weight: 700;
   color: var(--accent-dark);
@@ -743,12 +724,6 @@ button { cursor: pointer; border: none; background: none; font-family: var(--fon
   margin-bottom: 0.75rem;
   display: block;
 }
-.achievement-card p {
-  font-family: 'Mallanna', sans-serif;
-  font-size: 1.15rem;
-  color: rgba(255,255,255,0.9);
-  line-height: 1.6;
-}
 
 /* ---------- TESTIMONIALS ---------- */
 .testimonials-section {
@@ -778,20 +753,12 @@ button { cursor: pointer; border: none; background: none; font-family: var(--fon
   line-height: 1;
   margin-bottom: 1rem;
 }
-.testimonial-card p {
-  font-family: 'Mallanna', sans-serif;
-  font-size: 1.3rem;
-  color: #000000;
-  line-height: 1.8;
-  flex: 1;
-  margin-bottom: 1.5rem;
-}
+.testimonial-content { flex: 1; margin-bottom: 1.5rem; }
 .testimonial-card footer {
   display: flex;
   align-items: center;
   gap: 0.875rem;
 }
-/* పాత ఇమేజ్ ప్లేస్‌లో ఎమోజీ కోసం క్రియేట్ చేసిన కొత్త క్లాస్ */
 .testimonial-emoji {
   font-size: 3rem;
   line-height: 1;
@@ -813,34 +780,27 @@ button { cursor: pointer; border: none; background: none; font-family: var(--fon
   font-size: 0.8rem;
   color: var(--text-light);
 }
-.telugu-role {
-  font-family: 'Mallanna', sans-serif;
-  font-size: 1.15rem;
-}
 
-/* ---------- FOUNDER SECTION ---------- */
+/* ---------- FOUNDERS SECTION ---------- */
 .founder-section {
   padding: 6rem 0;
-  background: var(--light-bg); /* పక్క సెక్షన్స్ నుండి కొద్దిగా వేరుగా కనిపించడానికి */
+  background: var(--light-bg);
 }
-.founder-layout {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  max-width: 800px;
-  margin: 0 auto;
+.founder-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
 }
 .founder-content {
   background: var(--white);
   border-radius: var(--radius-lg);
   padding: 3rem 2rem;
   box-shadow: var(--shadow);
-  margin-top: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.5rem;
+  text-align: center;
   border: 1px solid var(--border);
 }
 .founder-emoji {
@@ -855,22 +815,54 @@ button { cursor: pointer; border: none; background: none; font-family: var(--fon
   background: rgba(13, 110, 253, 0.1);
   color: var(--accent);
   flex-shrink: 0;
+  margin-bottom: 1.5rem;
 }
-.founder-text p {
-  font-family: 'Mallanna', sans-serif;
+
+/* ---------- DETAILED ABOUT US SECTION ---------- */
+.about-detailed-section {
+  padding: 6rem 0;
+  background: var(--white);
+}
+.lang-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+.lang-card {
+  background: var(--off-white);
+  padding: 2.5rem 2rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+}
+.lang-card h3 {
+  font-family: var(--font-heading);
   font-size: 1.35rem;
-  color: #000000;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+.lang-card h4 {
+  font-family: var(--font-body);
+  color: var(--accent-dark);
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 1.75rem 0 0.5rem;
+}
+.about-list {
+  margin-left: 1.25rem;
+  list-style-type: disc;
   margin-bottom: 1rem;
-  line-height: 1.8;
 }
-.founder-text p:last-child {
-  margin-bottom: 0;
-}
+.about-list li { margin-bottom: 0.4rem; }
+
 
 /* ---------- CONTACT ---------- */
 .contact-section {
   padding: 6rem 0;
-  background: var(--white);
+  background: var(--light-bg);
 }
 .contact-grid {
   display: grid;
@@ -879,13 +871,6 @@ button { cursor: pointer; border: none; background: none; font-family: var(--fon
   align-items: start;
 }
 .contact-info .section-title { margin-top: 0.5rem; }
-.contact-info > p { 
-  font-family: 'Mallanna', sans-serif;
-  font-size: 1.3rem;
-  color: #000000; 
-  margin-bottom: 2rem; 
-  line-height: 1.8;
-}
 .contact-details { display: flex; flex-direction: column; gap: 1.25rem; }
 .contact-details li {
   display: flex;
@@ -902,10 +887,10 @@ button { cursor: pointer; border: none; background: none; font-family: var(--fon
 .contact-details a:hover { color: var(--accent-dark); }
 
 .contact-form-wrap {
-  background: var(--off-white);
+  background: var(--white);
   border-radius: var(--radius-lg);
   padding: 2.5rem;
-  box-shadow: var(--shadow);
+  box-shadow: var(--shadow-lg);
   border: 1px solid var(--border);
 }
 .contact-form h3 {
@@ -973,13 +958,6 @@ button { cursor: pointer; border: none; background: none; font-family: var(--fon
   color: var(--white);
   margin-bottom: 0.5rem;
 }
-.donate-text p { 
-  font-family: 'Mallanna', sans-serif;
-  font-size: 1.35rem;
-  color: rgba(255,255,255,0.95); 
-  max-width: 650px; 
-  line-height: 1.8;
-}
 
 /* ---------- FOOTER ---------- */
 .footer {
@@ -1045,8 +1023,6 @@ button { cursor: pointer; border: none; background: none; font-family: var(--fon
   gap: 0.5rem;
 }
 .footer-bottom p { font-size: 0.85rem; color: rgba(255,255,255,0.7); }
-
-/* ఇక్కడ మీ పేరుకి నార్మల్ సైజు ఇచ్చి, బ్లూ కలర్ అప్లై చేశాను */
 .footer-bottom .developer-credit {
   font-size: 0.85rem;
   color: var(--accent);
@@ -1088,6 +1064,7 @@ button { cursor: pointer; border: none; background: none; font-family: var(--fon
   .achievements-grid { grid-template-columns: repeat(2, 1fr); }
   .programs-grid { grid-template-columns: repeat(2, 1fr); }
   .footer-grid { grid-template-columns: 1fr 1fr; }
+  .lang-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 768px) {
@@ -1097,8 +1074,13 @@ button { cursor: pointer; border: none; background: none; font-family: var(--fon
   .achievements-section,
   .testimonials-section,
   .founder-section,
+  .about-detailed-section,
   .contact-section { padding: 3.5rem 0; }
+  
+  .founder-grid { grid-template-columns: 1fr; gap: 1.5rem; }
   .founder-content { padding: 2rem 1.5rem; }
+  .lang-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+
   .donate-banner { padding: 3rem 0; }
   .section-desc { margin-bottom: 2rem; }
   .section-desc.center { margin-bottom: 2rem; }
@@ -1170,6 +1152,7 @@ button { cursor: pointer; border: none; background: none; font-family: var(--fon
   .achievements-section,
   .testimonials-section,
   .founder-section,
+  .about-detailed-section,
   .contact-section { padding: 2.5rem 0; }
   .donate-banner { padding: 2.5rem 0; }
   .hero { padding: 100px 0 50px; }
