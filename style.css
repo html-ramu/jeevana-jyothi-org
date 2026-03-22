@@ -188,7 +188,6 @@ button { cursor: pointer; border: none; background: none; font-family: var(--fon
   text-decoration: none;
 }
 
-/* Updated logo-icon to remove the blue circle and highlight the Diya emoji */
 .logo-icon {
   width: 44px;
   height: 44px;
@@ -802,19 +801,15 @@ button { cursor: pointer; border: none; background: none; font-family: var(--fon
   text-align: center;
   border: 1px solid var(--border);
 }
-.founder-emoji {
-  font-size: 4rem;
-  line-height: 1;
-  width: 90px;
-  height: 90px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
+/* New style for founders' real images */
+.founder-img {
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
-  background: rgba(13, 110, 253, 0.1);
-  color: var(--accent);
-  flex-shrink: 0;
+  object-fit: cover;
   margin-bottom: 1.5rem;
+  border: 3px solid rgba(13, 110, 253, 0.2);
 }
 
 /* ---------- DETAILED ABOUT US SECTION ---------- */
@@ -822,6 +817,17 @@ button { cursor: pointer; border: none; background: none; font-family: var(--fon
   padding: 6rem 0;
   background: var(--white);
 }
+
+/* New style for About Us section logo */
+.about-detailed-logo {
+  display: block;
+  margin: 0 auto 2rem;
+  max-width: 180px;
+  height: auto;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
 .lang-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
