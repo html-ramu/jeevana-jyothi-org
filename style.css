@@ -210,6 +210,15 @@ button { cursor: pointer; border: none; background: none; font-family: var(--fon
   letter-spacing: 0.05em;
   text-transform: uppercase;
 }
+.logo-micro {
+  display: block;
+  font-size: 0.55rem;
+  color: var(--text-light);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: 2px;
+}
+
 .nav-links ul {
   display: flex;
   align-items: center;
@@ -729,7 +738,7 @@ button { cursor: pointer; border: none; background: none; font-family: var(--fon
 }
 .testimonials-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr); /* Changed to 2 columns for long text */
   gap: 1.75rem;
 }
 .testimonial-card {
@@ -755,26 +764,24 @@ button { cursor: pointer; border: none; background: none; font-family: var(--fon
   display: flex;
   align-items: center;
   gap: 0.875rem;
+  margin-top: 1rem;
 }
-.testimonial-emoji {
-  font-size: 3rem;
-  line-height: 1;
-  width: 60px;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.testimonial-img {
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
-  background: var(--light-bg);
+  object-fit: cover;
+  border: 2px solid var(--accent);
   flex-shrink: 0;
 }
 .testimonial-card footer strong {
   display: block;
-  font-size: 0.95rem;
+  font-size: 1.05rem;
   color: var(--primary);
+  margin-bottom: 0.2rem;
 }
 .testimonial-card footer span {
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   color: var(--text-light);
 }
 
@@ -868,10 +875,13 @@ button { cursor: pointer; border: none; background: none; font-family: var(--fon
 }
 .aims-list li { margin-bottom: 0.5rem; line-height: 1.6; }
 
-/* ---------- FOUNDER'S MESSAGE SECTION ---------- */
-.founder-message-section {
+/* ---------- FOUNDER & TREASURER MESSAGE SECTION ---------- */
+.founder-message-section, .treasurer-message-section {
   padding: 6rem 0;
   background: var(--white);
+}
+.treasurer-message-section {
+  background: var(--light-bg);
 }
 .bank-details-dark {
   background: rgba(13,59,102,0.05);
@@ -887,6 +897,17 @@ button { cursor: pointer; border: none; background: none; font-family: var(--fon
 }
 .bank-details-dark p { margin-bottom: 0.5rem; }
 .bank-details-dark p:last-child { margin-bottom: 0; }
+
+.highlight-quote {
+  background: rgba(13, 110, 253, 0.08);
+  border-left: 4px solid var(--accent);
+  padding: 1.2rem 1.5rem;
+  border-radius: 0 var(--radius) var(--radius) 0;
+  font-style: italic;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.highlight-quote p { font-weight: 600; color: var(--primary); }
 
 /* ---------- BROCHURE SECTION ---------- */
 .brochure-section {
@@ -968,7 +989,15 @@ button { cursor: pointer; border: none; background: none; font-family: var(--fon
   font-family: var(--font-heading);
   font-size: 1.5rem;
   color: var(--primary);
-  margin-bottom: 1.75rem;
+  margin-bottom: 0.2rem;
+}
+.form-tagline {
+  margin-bottom: 1.5rem;
+  color: var(--text-light);
+  font-weight: 500;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 .form-group { margin-bottom: 1.25rem; }
 .form-group label {
@@ -1150,6 +1179,7 @@ button { cursor: pointer; border: none; background: none; font-family: var(--fon
   .programs-grid { grid-template-columns: repeat(2, 1fr); }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .lang-grid { grid-template-columns: repeat(2, 1fr); }
+  .testimonials-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 768px) {
@@ -1162,6 +1192,7 @@ button { cursor: pointer; border: none; background: none; font-family: var(--fon
   .about-detailed-section,
   .aims-section,
   .founder-message-section,
+  .treasurer-message-section,
   .gallery-section,
   .contact-section { padding: 3.5rem 0; }
   
@@ -1243,6 +1274,7 @@ button { cursor: pointer; border: none; background: none; font-family: var(--fon
   .about-detailed-section,
   .aims-section,
   .founder-message-section,
+  .treasurer-message-section,
   .gallery-section,
   .contact-section { padding: 2.5rem 0; }
   .donate-banner { padding: 2.5rem 0; }
