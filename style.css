@@ -187,7 +187,6 @@ button { cursor: pointer; border: none; background: none; font-family: var(--fon
   gap: 0.75rem;
   text-decoration: none;
 }
-
 .logo-icon {
   width: 44px;
   height: 44px;
@@ -197,7 +196,6 @@ button { cursor: pointer; border: none; background: none; font-family: var(--fon
   font-size: 2.2rem;
   flex-shrink: 0;
 }
-
 .logo-main {
   display: block;
   font-family: 'Sree Krushnadevaraya', serif;
@@ -409,6 +407,7 @@ button { cursor: pointer; border: none; background: none; font-family: var(--fon
   font-family: var(--font-heading);
   font-size: 1.6rem;
   margin-bottom: 0.5rem;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
 }
 .carousel-btn {
   position: absolute;
@@ -801,8 +800,6 @@ button { cursor: pointer; border: none; background: none; font-family: var(--fon
   text-align: center;
   border: 1px solid var(--border);
 }
-
-/* New style for founders' real images */
 .founder-img {
   width: 120px;
   height: 120px;
@@ -817,8 +814,6 @@ button { cursor: pointer; border: none; background: none; font-family: var(--fon
   padding: 6rem 0;
   background: var(--white);
 }
-
-/* New style for About Us section logo */
 .about-detailed-logo {
   display: block;
   margin: 0 auto 2rem;
@@ -827,7 +822,6 @@ button { cursor: pointer; border: none; background: none; font-family: var(--fon
   border-radius: var(--radius);
   box-shadow: var(--shadow);
 }
-
 .lang-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -863,6 +857,78 @@ button { cursor: pointer; border: none; background: none; font-family: var(--fon
 }
 .about-list li { margin-bottom: 0.4rem; }
 
+/* ---------- AIMS & OBJECTIVES SECTION ---------- */
+.aims-section {
+  padding: 6rem 0;
+  background: var(--light-bg);
+}
+.aims-list {
+  margin-left: 1.25rem;
+  margin-bottom: 1rem;
+}
+.aims-list li { margin-bottom: 0.5rem; line-height: 1.6; }
+
+/* ---------- FOUNDER'S MESSAGE SECTION ---------- */
+.founder-message-section {
+  padding: 6rem 0;
+  background: var(--white);
+}
+.bank-details-dark {
+  background: rgba(13,59,102,0.05);
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  margin-top: 1.5rem;
+  border: 1px solid rgba(13,59,102,0.1);
+  color: var(--text-dark);
+  text-align: left;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+.bank-details-dark p { margin-bottom: 0.5rem; }
+.bank-details-dark p:last-child { margin-bottom: 0; }
+
+/* ---------- BROCHURE SECTION ---------- */
+.brochure-section {
+  padding: 4rem 0;
+  background: var(--off-white);
+}
+.brochure-img {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  display: block;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+}
+
+/* ---------- GALLERY SECTION ---------- */
+.gallery-section {
+  padding: 5rem 0 2rem;
+  background: var(--white);
+}
+.gallery-btn {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 2rem 4rem;
+  margin-top: 1.5rem;
+  background: var(--off-white);
+  border-radius: var(--radius-lg);
+  text-decoration: none;
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 1.25rem;
+  box-shadow: var(--shadow);
+  transition: all var(--transition);
+  border: 1px solid var(--border);
+}
+.gallery-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--accent);
+}
 
 /* ---------- CONTACT ---------- */
 .contact-section {
@@ -963,6 +1029,20 @@ button { cursor: pointer; border: none; background: none; font-family: var(--fon
   color: var(--white);
   margin-bottom: 0.5rem;
 }
+.bank-details-box {
+  background: rgba(255,255,255,0.15);
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  margin-top: 1.5rem;
+  border: 1px solid rgba(255,255,255,0.3);
+  color: var(--white);
+  text-align: left;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+.bank-details-box p { margin-bottom: 0.5rem; color: var(--white); }
+.bank-details-box p:last-child { margin-bottom: 0; }
 
 /* ---------- FOOTER ---------- */
 .footer {
@@ -1080,6 +1160,9 @@ button { cursor: pointer; border: none; background: none; font-family: var(--fon
   .testimonials-section,
   .founder-section,
   .about-detailed-section,
+  .aims-section,
+  .founder-message-section,
+  .gallery-section,
   .contact-section { padding: 3.5rem 0; }
   
   .founder-grid { grid-template-columns: 1fr; gap: 1.5rem; }
@@ -1158,6 +1241,9 @@ button { cursor: pointer; border: none; background: none; font-family: var(--fon
   .testimonials-section,
   .founder-section,
   .about-detailed-section,
+  .aims-section,
+  .founder-message-section,
+  .gallery-section,
   .contact-section { padding: 2.5rem 0; }
   .donate-banner { padding: 2.5rem 0; }
   .hero { padding: 100px 0 50px; }
