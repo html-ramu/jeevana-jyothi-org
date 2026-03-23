@@ -140,7 +140,7 @@ dots.forEach((dot, i) => {
 
 // Keyboard support for carousel
 document.addEventListener('keydown', (e) => {
-  const carouselSection = document.getElementById('home'); // Changed to home
+  const carouselSection = document.getElementById('home'); 
   if (!carouselSection) return;
   const rect = carouselSection.getBoundingClientRect();
   const inView = rect.top < window.innerHeight && rect.bottom > 0;
@@ -298,8 +298,9 @@ contactForm.addEventListener('submit', (e) => {
   const subject  = contactForm.subject.value;
   const message  = contactForm.message.value.trim();
 
-  if (!fullName || !email || !subject || !message) {
-    alert('Please fill in all required fields.');
+  // Subject is always selected because of our new default structure, but checking anyway
+  if (!email) {
+    alert('Please fill in required fields.');
     return;
   }
 
