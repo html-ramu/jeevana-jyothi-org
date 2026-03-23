@@ -196,20 +196,21 @@ button { cursor: pointer; border: none; background: none; font-family: var(--fon
   font-size: 2.2rem;
   flex-shrink: 0;
 }
+/* Logo Text Updates */
 .logo-main {
   display: block;
   font-family: var(--font-body);
   font-size: 1.15rem;
-  color: var(--accent-dark);
-  font-weight: 800;
-  text-transform: uppercase;
+  color: var(--accent-dark); /* Blue color */
+  font-weight: 800; /* Bold */
+  text-transform: uppercase; /* All caps */
   line-height: 1.2;
 }
 .logo-sub {
   display: block;
   font-size: 0.8rem;
-  color: #3d4b5e;
-  font-weight: 400;
+  color: #3d4b5e; /* Light black/Grey */
+  font-weight: 400; /* Not bold */
   margin-top: 2px;
 }
 .logo-micro {
