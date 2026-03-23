@@ -766,8 +766,10 @@ button { cursor: pointer; border: none; background: none; font-family: var(--fon
 }
 .testimonials-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 columns for long text */
+  grid-template-columns: 1fr; /* Updated to 1 column since there is only 1 testimonial now */
   gap: 1.75rem;
+  max-width: 900px;
+  margin: 0 auto;
 }
 .testimonial-card {
   background: var(--white);
