@@ -198,25 +198,26 @@ button { cursor: pointer; border: none; background: none; font-family: var(--fon
 }
 .logo-main {
   display: block;
-  font-family: 'Sree Krushnadevaraya', serif;
-  font-size: 1.5rem;
-  color: var(--text-dark);
+  font-family: var(--font-body);
+  font-size: 1.15rem;
+  color: var(--accent-dark);
+  font-weight: 800;
+  text-transform: uppercase;
   line-height: 1.2;
 }
 .logo-sub {
   display: block;
-  font-size: 0.7rem;
-  color: var(--accent);
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
+  font-size: 0.8rem;
+  color: #3d4b5e;
+  font-weight: 400;
+  margin-top: 2px;
 }
 .logo-micro {
   display: block;
-  font-size: 0.55rem;
-  color: var(--text-light);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  margin-top: 2px;
+  font-size: 0.75rem;
+  color: #555555;
+  font-weight: 400;
+  margin-top: 1px;
 }
 
 .nav-links ul {
@@ -738,7 +739,7 @@ button { cursor: pointer; border: none; background: none; font-family: var(--fon
 }
 .testimonials-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Changed to 2 columns for long text */
+  grid-template-columns: repeat(2, 1fr); /* 2 columns for long text */
   gap: 1.75rem;
 }
 .testimonial-card {
@@ -898,16 +899,37 @@ button { cursor: pointer; border: none; background: none; font-family: var(--fon
 .bank-details-dark p { margin-bottom: 0.5rem; }
 .bank-details-dark p:last-child { margin-bottom: 0; }
 
+/* Highlight Quotes Styling (Multi-color) */
 .highlight-quote {
-  background: rgba(13, 110, 253, 0.08);
-  border-left: 4px solid var(--accent);
   padding: 1.2rem 1.5rem;
   border-radius: 0 var(--radius) var(--radius) 0;
   font-style: italic;
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
 }
-.highlight-quote p { font-weight: 600; color: var(--primary); }
+.highlight-quote p { font-weight: 600; }
+
+/* English - Blue Highlight */
+.highlight-en {
+  background: rgba(13, 110, 253, 0.08); 
+  border-left: 4px solid var(--accent);
+}
+.highlight-en p { color: var(--primary); }
+
+/* Hindi - Green Highlight */
+.highlight-hi {
+  background: rgba(46, 204, 113, 0.1); 
+  border-left: 4px solid #27ae60;
+}
+.highlight-hi p { color: #1e8449; }
+
+/* Telugu - Pink Highlight */
+.highlight-te {
+  background: rgba(232, 62, 140, 0.08); 
+  border-left: 4px solid #e83e8c;
+}
+.highlight-te p { color: #c2185b; }
+
 
 /* ---------- BROCHURE SECTION ---------- */
 .brochure-section {
