@@ -213,13 +213,6 @@ button { cursor: pointer; border: none; background: none; font-family: var(--fon
   font-weight: 400; /* Not bold */
   margin-top: 2px;
 }
-.logo-micro {
-  display: block;
-  font-size: 0.75rem;
-  color: #555555;
-  font-weight: 400;
-  margin-top: 1px;
-}
 
 .nav-links ul {
   display: flex;
@@ -301,6 +294,38 @@ button { cursor: pointer; border: none; background: none; font-family: var(--fon
 
 .nav-links { display: flex; align-items: center; }
 
+/* ---------- NEWS TICKER / SCROLLBAR ---------- */
+.ticker-wrap {
+  width: 100%;
+  height: 36px;
+  background-color: var(--accent); /* Blue bg */
+  overflow: hidden;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+}
+.ticker-move {
+  display: inline-block;
+  white-space: nowrap;
+  padding-left: 100vw; /* Start off-screen right */
+  animation: ticker 30s linear infinite;
+}
+.ticker-move:hover {
+  animation-play-state: paused;
+}
+.ticker-item {
+  display: inline-block;
+  color: var(--white); /* White text */
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  font-family: var(--font-body);
+}
+@keyframes ticker {
+  0%   { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-100%, 0, 0); }
+}
+
 /* ---------- HERO ---------- */
 .hero {
   min-height: 100vh;
@@ -308,7 +333,8 @@ button { cursor: pointer; border: none; background: none; font-family: var(--fon
   display: flex;
   align-items: center;
   position: relative;
-  padding: 120px 0 80px;
+  /* Updated padding to account for navbar (72px) + ticker (36px) = 108px */
+  padding: 130px 0 80px;
   overflow: hidden;
 }
 .hero-layout {
@@ -1231,9 +1257,11 @@ button { cursor: pointer; border: none; background: none; font-family: var(--fon
   .footer-grid { gap: 2rem; padding-bottom: 2rem; }
   
   .hamburger { display: flex; }
+  
+  /* Adjusted for new Ticker Height (72px nav + 36px ticker = 108px) */
   .nav-links {
     position: fixed;
-    top: 72px; left: 0; right: 0;
+    top: 108px; left: 0; right: 0;
     background: var(--white);
     padding: 1.5rem;
     flex-direction: column;
@@ -1243,7 +1271,7 @@ button { cursor: pointer; border: none; background: none; font-family: var(--fon
     opacity: 0;
     transition: all var(--transition);
     pointer-events: none;
-    max-height: calc(100vh - 72px);
+    max-height: calc(100vh - 108px);
     overflow-y: auto;
   }
   .nav-links.open {
@@ -1301,7 +1329,7 @@ button { cursor: pointer; border: none; background: none; font-family: var(--fon
   .gallery-section,
   .contact-section { padding: 2.5rem 0; }
   .donate-banner { padding: 2.5rem 0; }
-  .hero { padding: 100px 0 50px; }
+  .hero { padding: 120px 0 50px; } /* Adjusted for ticker on mobile */
   .about-img { height: 260px; }
   
   .achievements-grid { grid-template-columns: 1fr; }
