@@ -179,7 +179,7 @@ button { cursor: pointer; border: none; background: none; font-family: var(--fon
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 80px; /* Increased slightly to fit the logo image better */
+  height: 90px; /* Increased height to accommodate bigger logo */
 }
 .nav-logo {
   display: flex;
@@ -187,9 +187,9 @@ button { cursor: pointer; border: none; background: none; font-family: var(--fon
   text-decoration: none;
 }
 
-/* CSS for the NEW Image Logo in Navbar */
+/* CSS for the NEW BIG Image Logo in Navbar */
 .nav-logo-img {
-  height: 54px; /* Increased for better visibility */
+  height: 65px; /* Bigger logo height */
   width: auto;
   display: block;
   object-fit: contain;
@@ -341,7 +341,7 @@ button { cursor: pointer; border: none; background: none; font-family: var(--fon
   display: flex;
   align-items: center;
   position: relative;
-  /* Updated padding to account for navbar (80px) + ticker (36px) = 116px */
+  /* Updated padding to account for bigger navbar (90px) + ticker (36px) = 126px */
   padding: 140px 0 80px;
   overflow: hidden;
 }
@@ -1313,10 +1313,10 @@ button { cursor: pointer; border: none; background: none; font-family: var(--fon
   
   .hamburger { display: flex; }
   
-  /* Adjusted for new Ticker Height (80px nav + 36px ticker = 116px) */
+  /* Adjusted for new Ticker Height (90px nav + 36px ticker = 126px) */
   .nav-links {
     position: fixed;
-    top: 116px; left: 0; right: 0;
+    top: 126px; left: 0; right: 0;
     background: var(--white);
     padding: 1.5rem;
     flex-direction: column;
@@ -1326,7 +1326,7 @@ button { cursor: pointer; border: none; background: none; font-family: var(--fon
     opacity: 0;
     transition: all var(--transition);
     pointer-events: none;
-    max-height: calc(100vh - 116px);
+    max-height: calc(100vh - 126px);
     overflow-y: auto;
   }
   .nav-links.open {
@@ -1384,7 +1384,7 @@ button { cursor: pointer; border: none; background: none; font-family: var(--fon
   .gallery-section,
   .contact-section { padding: 2.5rem 0; }
   .donate-banner { padding: 2.5rem 0; }
-  .hero { padding: 130px 0 50px; } /* Adjusted for ticker on mobile with larger logo */
+  .hero { padding: 140px 0 50px; } /* Adjusted for ticker on mobile with larger logo */
   .about-img { height: 260px; }
   
   .achievements-grid { grid-template-columns: 1fr; }
@@ -1392,7 +1392,7 @@ button { cursor: pointer; border: none; background: none; font-family: var(--fon
   .carousel-slide img { height: 250px; }
   .contact-form-wrap { padding: 1.5rem; }
   .program-card { padding: 1.5rem; }
-  .nav-logo-img { height: 44px; } /* Slightly smaller logo for very small phones */
+  .nav-logo-img { height: 55px; } /* Increased logo height for very small phones */
 }
 
 /* ---------- FOCUS VISIBLE STYLES (Accessibility) ---------- */
