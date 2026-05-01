@@ -358,6 +358,24 @@ button { cursor: pointer; border: none; background: none; font-family: var(--fon
   margin: 0 auto; 
   text-align: center;
 }
+/* ---------- HERO POSTERS ---------- */
+.hero-posters {
+  display: flex;
+  flex-direction: column;  /* Stacks the images one by one vertically */
+  align-items: center;
+  gap: 1.5rem;             /* Space between the two posters */
+  margin: 1.5rem auto;     /* Space above and below the posters block */
+  max-width: 600px;        /* Prevents posters from getting too massive on large screens */
+  width: 100%;
+}
+
+.poster-img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border);
+}
 .hero-badge {
   display: inline-block;
   background: rgba(13, 110, 253, 0.08);
@@ -1394,7 +1412,6 @@ button { cursor: pointer; border: none; background: none; font-family: var(--fon
   .program-card { padding: 1.5rem; }
   .nav-logo-img { height: 55px; } /* Increased logo height for very small phones */
 }
-
 /* ---------- FOCUS VISIBLE STYLES (Accessibility) ---------- */
 *:focus-visible {
   outline: 3px solid var(--accent);
